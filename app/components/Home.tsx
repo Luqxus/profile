@@ -53,7 +53,7 @@ const HeaderText = () => {
                          rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 
                          hover:scale-105 animate-bounce-in opacity-0 [animation-delay:1000ms]"
             >
-                LET'S TALK WITH ME
+                {"LET'S TALK WITH ME"}
             </button>
 
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-x-8 text-sm md:text-base lg:text-lg text-gray-700">
@@ -63,7 +63,7 @@ const HeaderText = () => {
                              hover:scale-105 animate-fade-up opacity-0 [animation-delay:1200ms]"
                 >
                     <Phone className="animate-pulse" size={20} />
-                    <span>+27 79 044 6226</span>
+                    <span>{"+27 79 044 6226"}</span>
                 </a>
                 <a 
                     href="mailto:lebelwane@protonmail.com"
@@ -71,7 +71,7 @@ const HeaderText = () => {
                              hover:scale-105 animate-fade-up opacity-0 [animation-delay:1400ms]"
                 >
                     <Mail className="animate-pulse" size={20} />
-                    <span>lebelwane@protonmail.com</span>
+                    <span>{"lebelwane@protonmail.com"}</span>
                 </a>
             </div>
         </div>
