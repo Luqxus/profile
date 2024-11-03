@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
 import { SocialIcon } from "react-social-icons/component";
 import 'react-social-icons/x'
