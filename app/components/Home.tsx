@@ -74,7 +74,7 @@ const HeaderText = () => {
                     <span>{"lebelwane@protonmail.com"}</span>
                 </a>
             </div>
-        </div>
+        </div>  
     );
 };
 
