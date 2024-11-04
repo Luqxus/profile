@@ -37,7 +37,7 @@ const HeaderText = () => {
                     <span className="inline-block animate-slide-right opacity-0 [animation-delay:200ms]">MY NAME</span> <br />
                     <span className="inline-block animate-slide-right opacity-0 [animation-delay:400ms]">IS</span>{" "}
                     <span className="font-extrabold inline-block animate-slide-up-fade opacity-0 [animation-delay:600ms]">
-                        LUCAS <p className="text-[#B238EF]">LEBELWANE</p>
+                        <span>LUCAS</span> <span className="text-[#FF6C63]">LEBELWANE</span>
                     </span>
                 </p>
             </div>
