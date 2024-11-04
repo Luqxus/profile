@@ -1,3 +1,4 @@
+import About from "./components/About";
 import HomeView from "./components/Home";
 import Sidebar from "./components/Sidebar";
 
@@ -7,7 +8,9 @@ export default function Home() {
       <main className="flex w-screen">
       <Sidebar />
         
+      <div className="flex-1">
       <HomeView />
+      <About /></div>
       </main>
       
     </div>

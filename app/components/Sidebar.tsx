@@ -5,6 +5,7 @@ import { Menu, X, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react'
 interface ItemsProps {
     index: number,
     label: string,
+    link: string,
     selected: boolean,
     onPress: Dispatch<SetStateAction<number>>
 }
@@ -14,7 +15,7 @@ const Sidebar = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
-    const items = ["Home", "About", "Services", "Work", "Blogs", "Contact"];
+    const items = [{label: "Home", link: "#home"}, {label:"About", link: "#about"}, {label: "Services", link:"#service"}, {label:"Work", link:"#work"}, {label:"Blogs", link:"#blogs"}, {label:"Contact", link:"#contact"}];
 
     useEffect(() => {
         const handleResize = () => {
@@ -50,7 +51,8 @@ const Sidebar = () => {
                             {items.map((item, index) => (
                                 <div key={index} className="animate-slide-in-right" style={{ animationDelay: `${index * 100}ms` }}>
                                     <ItemComponent
-                                        label={item}
+                                        label={item.label}
+                                        link={item.link}
                                         selected={index === selectedIndex}
                                         onPress={(idx) => {
                                             setSelectedIndex(idx as number);
@@ -73,7 +75,8 @@ const Sidebar = () => {
                         {items.slice(0, 4).map((item, index) => (
                             <div key={index} className="animate-bounce-in" style={{ animationDelay: `${index * 100}ms` }}>
                                 <ItemComponent
-                                    label={item}
+                                    label={item.label}
+                                    link={item.link}
                                     selected={index === selectedIndex}
                                     onPress={setSelectedIndex}
                                     index={index}
@@ -94,7 +97,8 @@ const Sidebar = () => {
                 {items.map((item, index) => (
                     <div key={index} className="animate-slide-in-right" style={{ animationDelay: `${index * 100}ms` }}>
                         <ItemComponent
-                            label={item}
+                            label={item.label}
+                            link={item.link}
                             selected={index === selectedIndex}
                             onPress={setSelectedIndex}
                             index={index}
@@ -119,7 +123,7 @@ const ItemComponent = (props: ItemsProps) => {
                          "font-bold bg-white/5 shadow-lg scale-105" : 
                          "font-thin"}`}
         >
-            <p>{props.label}</p>
+            <a href={props.link}><p>{props.label}</p></a>
         </div>
     );
 };
