@@ -33,7 +33,7 @@ const Sidebar = () => {
         return (
             <>
                 {/* Mobile Header */}
-                <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-4 bg-black text-white z-50 animate-slide-down">
+                <div className="fixed  top-0 left-0 right-0 flex justify-between items-center p-4 bg-black text-white z-50 animate-slide-down">
                     <p className="font-bold text-xl animate-fade-in">Luc.</p>
                     <button 
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -45,7 +45,7 @@ const Sidebar = () => {
 
                 {/* Mobile Menu Overlay */}
                 {isMenuOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-95 z-40 pt-16 animate-fade-in">
+                    <div className="fixed  inset-0 bg-black bg-opacity-95 z-40 pt-16 animate-fade-in">
                         <div className="flex flex-col items-center justify-center h-full space-y-8">
                             {items.map((item, index) => (
                                 <div key={index} className="animate-slide-in-right" style={{ animationDelay: `${index * 100}ms` }}>
